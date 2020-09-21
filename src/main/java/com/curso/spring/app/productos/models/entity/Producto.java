@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "productos")
@@ -29,8 +30,6 @@ public class Producto implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
 	
-	private boolean isActivo;
-
 	public Long getId() {
 		return id;
 	}
@@ -62,15 +61,5 @@ public class Producto implements Serializable {
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
 	}
-
-	public boolean isActivo() {
-		return isActivo;
-	}
-
-	public void setActivo(boolean isActivo) {
-		this.isActivo = isActivo;
-	}
-	
-	
 
 }
